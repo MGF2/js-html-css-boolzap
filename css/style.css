@@ -29,7 +29,6 @@
   height: 95vh;
   width: 80vw;
   min-width: 800px;
-  /* background-color: pink; */
   margin: 12px auto;
 }
 
@@ -41,7 +40,6 @@ header {
 aside {
   height: calc(100% - 65px);
   width: 300px;
-  /* background-color: teal; */
   float: left;
 }
 
@@ -62,10 +60,8 @@ aside .convers {
 }
 
 main {
-  background-color: lightblue;
   height: calc(100% - 65px);
   width: calc(100% - 300px);
-  /* width: 500px; */
   float: left;
 }
 

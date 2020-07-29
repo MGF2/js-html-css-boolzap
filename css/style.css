@@ -170,7 +170,28 @@ aside .conv-box .icon-text small , .icon-box small{
 
 aside .search-bar {
   height: 40px;
-  background-color: white;
+  background-color: #fdfdfd;
+  position: relative;
+  text-align: center;
+  padding: 5px;
+}
+
+aside .search-bar input {
+  padding: 10px;
+  width: 340px;;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #f8f8f8;
+  color: grey;
+  padding-left: 45px;
+}
+
+aside .search-bar i {
+  font-size: 13px;
+  color: #b8b9bb;
+  position: absolute;
+  top: 14px;
+  left: 20px;;
 }
 
 aside .convers {

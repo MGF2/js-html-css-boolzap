@@ -48,22 +48,13 @@ header .container-you {
 header .container-msg {
   height: 65px;
   width: calc( 100% - 350px);
-  border-left: 1px solid lightgray;
+  border-left: 1px solid #d6d6d6;
   float: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 22px 10px 10px;
 }
-
-/* header .notify-bar {
-  height: 65px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 22px 10px 10px;
-} */
 
 header .container-you {
   display: flex;
@@ -126,10 +117,19 @@ aside  .icon-av .avatar {
   margin-right: 7px;
 }
 
-/* aside .icon-av .avatar i {
+aside .icon-av .bell{
   height: 50px;
   width: 50px;
-} */
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+
+aside .icon-av .bell i{
+  line-height: 50px;
+  color: #93dbf9;
+  font-size: 20px;
+}
 
 aside  .conv-box , aside .icon-av{
   display: flex;

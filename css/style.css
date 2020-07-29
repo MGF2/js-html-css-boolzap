@@ -33,8 +33,34 @@
 }
 
 header {
+  /* height: 65px; */
+  background-color: #eaeaea;
+}
+
+header .container-you {
   height: 65px;
-  background-color: tomato;
+  width: 300px;
+  float: left;
+}
+
+header .container-msg {
+  height: 65px;
+  width: calc( 100% - 300px);
+  border-left: 1px solid lightgray;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 22px 10px 10px;
+}
+
+header .container-msg .icon-box{
+  color: #b0b1af;
+  font-size: 20px;
+}
+
+header .container-msg .icon-box i{
+  margin-left: 10px;
 }
 
 aside {
@@ -45,7 +71,7 @@ aside {
 
 aside .notify-bar {
   height: 65px;
-  background-color: darkgray;
+  background-color: #8edafc;
 }
 
 aside .search-bar {
@@ -66,13 +92,54 @@ main {
 }
 
 main .main-conv {
-  background-color: pink;
+  background-color: #e5dcd5;
   height: calc(100% - 65px);
   overflow-y: scroll;
+  padding: 15px;
+}
+
+main .cloud {
+  height: 50px;
+  width: 130px;
+  clear: both;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
+main .cloud-time {
+ text-align: right;
+ color: gray;
+}
+
+main .received{
+  float: left;
+  background-color: #fff;
+}
+
+main .sent{
+  float: right;
+  background-color: #d5f9bb;
 }
 
 main .main-bar {
-  background-color: white;
+  background-color: #f3eeea;
   height: 65px;
   z-index: 1;
+}
+
+main .cont {
+  padding: 12px;
+  text-align: center;
+  font-size: 22px;
+  color: #6b7376;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .cont input {
+  padding: 12px;
+  width: 85%;
+  border: 1px solid white;
 }

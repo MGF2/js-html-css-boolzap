@@ -20,7 +20,7 @@ $(document).ready(function() {
       // 2 step -- creo clone del template da message
       var clone = $(".template .message").clone();
       var time = myTime();
-      // 3 STEP -- Aggiungo una classe
+      // 3 Step -- Aggiungo una classe
       clone.addClass("sent");
       // 4 step -- inserimento del testo
       clone.find(".cloud-top .text").append(valore);
@@ -31,7 +31,8 @@ $(document).ready(function() {
       setTimeout(rispostaAutomatica,2000);
       // 7 step -reset input
       valore = $("#content").val('');
-  }
+
+    }
 
   function rispostaAutomatica(){
       // 1 step - clonare il template
@@ -59,7 +60,8 @@ $(document).ready(function() {
     var d = new Date();
     var h = addZero(d.getHours());
     var m = addZero(d.getMinutes());
-    document.getElementById("time").innerHTML = h + ":" + m ;
+    return h + ':' + m;
+    // document.getElementById("time").innerHTML = h + ":" + m ;
   }
 
 

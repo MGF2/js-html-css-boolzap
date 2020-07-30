@@ -262,6 +262,16 @@ main .cont input {
   border: 1px solid white;
 }
 
-main #invio {
+main #invio:hover {
   cursor: pointer;
+  color: #8edafc;
 }
+
+/* PROVA */
+/* .active {
+  display: block;
+}
+
+.none {
+  display: none;
+} */

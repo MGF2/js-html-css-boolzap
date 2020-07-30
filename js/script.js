@@ -48,26 +48,19 @@ $(document).ready(function() {
 
   //GET TIME
 
+  function addZero(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
   function myTime() {
     var d = new Date();
-    var h = d.getHours();
-    var m = d.getMinutes();
+    var h = addZero(d.getHours());
+    var m = addZero(d.getMinutes());
     document.getElementById("time").innerHTML = h + ":" + m ;
   }
 
-  // function addZero(i) {
-  //   if (i < 10) {
-  //     i = "0" + i;
-  //   }
-  //   return i;
-  // }
-
-  // function myTime() {
-  //   var d = new Date();
-  //   var x = document.getElementById("time");
-  //   var h = addZero(d.getHours());
-  //   var m = addZero(d.getMinutes());
-  //   x.innerHTML = h + ":" + m ;
-  // }
 
 });

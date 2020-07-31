@@ -68,25 +68,33 @@ $(document).ready(function() {
     return h + ':' + m;
   }
 
+  //Al click cambia la conversazione
   $('.convers .conv-box').click(function() {
 
+    //indice del click
     var posizione = $(this).index();
 
+    //tolgo l'active alla conversazione utente(aside) e lo aggiungo a quella cliccata
     $('.convers .activeUt').removeClass('activeUt');
     $(this).addClass('activeUt');
 
+    //metto active nella conversazione (main) corrispondente all'index utente
     $('.main .active').removeClass('active').addClass('none');
     $('.main-conv').eq(posizione).removeClass('none').addClass('active');
 
+    //metto active nell'immagine corrispondente
     $('.conv-box .avatar .activeImg').removeClass('activeImg');
     $('.conv-box .avatar img').eq(posizione).addClass('activeImg');
 
+    //metto active nel nome utente corrispondente
     $('.conv-box .icon-text .activeName').removeClass('activeName');
     $('.conv-box .icon-text h5').eq(posizione).addClass('activeName');
 
+    //prendo il contenuto di immagine e nome utente attivo
     var avatar = $('.conv-box .activeImg').attr('src');
     var name = $('.conv-box h5.activeName').text();
 
+    //inserisco il contenuto nel nav (main)
     $('.container-msg .avatar img').attr('src', avatar);
     $('.container-msg .icon-text h5').text(name);
 
@@ -94,14 +102,18 @@ $(document).ready(function() {
 
   //SEARCH BAR FUNCTION
   function search() {
+    //prendo valore input
     var input = $('#search').val();
     console.log(input);
+    //memorizzo contenitore conversazioni
     var contatti = $('.conv-box');
+    //per ogni conversazione controllo
     contatti.each(function(){
       var nome = $(this);
+      //cerco nel testo del nome utente
       var cerca = nome.find('.icon-text > h5').text();
       console.log(cerca);
-
+      //Se il testo input è prensente nel nome utente allora mostra se no nascondi
       if (cerca.toLowerCase().includes(input.toLowerCase())) {
         nome.show();
       } else {

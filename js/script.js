@@ -13,6 +13,11 @@ $(document).ready(function() {
     invio();
   });
 
+  //Search
+  $('#search').keyup(function(){
+    search();
+  });
+
   //FUNZIONI
   function invio(){
       // 1 step -- prendere il valore
@@ -86,5 +91,24 @@ $(document).ready(function() {
     $('.container-msg .icon-text h5').text(name);
 
   });
+
+  //SEARCH BAR FUNCTION
+  function search() {
+    var input = $('#search').val();
+    console.log(input);
+    var contatti = $('.conv-box');
+    contatti.each(function(){
+      var nome = $(this);
+      var cerca = nome.find('.icon-text > h5').text();
+      console.log(cerca);
+
+      if (cerca.toLowerCase().includes(input.toLowerCase())) {
+        nome.show();
+      } else {
+        nome.hide();
+      }
+    })
+  }
+
 
 });

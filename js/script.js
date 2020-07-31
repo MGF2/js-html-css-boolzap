@@ -26,9 +26,9 @@ $(document).ready(function() {
       clone.find(".cloud-top .text").append(valore);
       clone.find(".cloud-time small").append(time);
       // 5 step - Inserimento nel DOM
-      $(".main-conv").append(clone);
+      $(".main .active").append(clone);
       // 6 step - risposta automatica
-      setTimeout(rispostaAutomatica,2000);
+      setTimeout(rispostaAutomatica,1000);
       // 7 step -reset input
       valore = $("#content").val('');
 
@@ -44,7 +44,7 @@ $(document).ready(function() {
       clone.find(".cloud-top .text").append("Ok");
       clone.find(".cloud-time small").append(time);
       // 4 step - mettere elemento nel DOM
-      $(".main-conv").append(clone);
+      $(".main .active").append(clone);
   }
 
   //GET TIME
@@ -84,8 +84,6 @@ $(document).ready(function() {
 
     $('.container-msg .avatar img').attr('src', avatar);
     $('.container-msg .icon-text h5').text(name);
-    console.log(avatar);
-    console.log(name);
 
   });
 

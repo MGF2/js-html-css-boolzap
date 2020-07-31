@@ -210,15 +210,17 @@ main .main-conv {
   height: calc(100% - 65px);
   overflow-y: scroll;
   padding: 15px;
+  /* display: none; */
 }
 
 main .cloud {
   min-width: 130px;
-  max-width: 300px;
+  max-width: 280px;
   clear: both;
   border-radius: 7px;
   margin-bottom: 10px;
   padding: 7px;
+  word-wrap: break-word;
 }
 
 main .cloud-time {
@@ -268,10 +270,14 @@ main #invio:hover {
 }
 
 /* PROVA */
-/* .active {
+/* main .main-conv .active {
   display: block;
-}
+} */
 
 .none {
   display: none;
-} */
+}
+
+.activeUt {
+  background-color: #e9ebea;
+}

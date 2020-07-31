@@ -61,8 +61,18 @@ $(document).ready(function() {
     var h = addZero(d.getHours());
     var m = addZero(d.getMinutes());
     return h + ':' + m;
-    // document.getElementById("time").innerHTML = h + ":" + m ;
   }
 
+  $('.convers .conv-box').click(function() {
+
+    var posizione = $(this).index();
+
+    $('.convers .activeUt').removeClass('activeUt');
+    $(this).addClass('activeUt');
+
+    $('.main .active').removeClass('active').addClass('none');
+    $('.main-conv').eq(posizione).removeClass('none').addClass('active');
+
+  });
 
 });

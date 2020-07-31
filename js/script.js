@@ -73,6 +73,20 @@ $(document).ready(function() {
     $('.main .active').removeClass('active').addClass('none');
     $('.main-conv').eq(posizione).removeClass('none').addClass('active');
 
+    $('.conv-box .avatar .activeImg').removeClass('activeImg');
+    $('.conv-box .avatar img').eq(posizione).addClass('activeImg');
+
+    $('.conv-box .icon-text .activeName').removeClass('activeName');
+    $('.conv-box .icon-text h5').eq(posizione).addClass('activeName');
+
+    var avatar = $('.conv-box .activeImg').attr('src');
+    var name = $('.conv-box h5.activeName').text();
+
+    $('.container-msg .avatar img').attr('src', avatar);
+    $('.container-msg .icon-text h5').text(name);
+    console.log(avatar);
+    console.log(name);
+
   });
 
 });
